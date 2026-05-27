@@ -4,19 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="She Can Foundation - Empowering women through education, mentorship, and community-driven initiatives.">
+    <meta name="description" content="She Can Foundation is a professional NGO dedicated to empowering women through education, mentorship, and community action in India.">
     <title>She Can Foundation | Empowering Women, Building Futures</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Premium Stylesheet Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+    <!-- PAGE LOADER OVERLAY -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -27,8 +33,10 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="volunteer.html" class="nav-link btn-nav-cta">Join Us</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -37,65 +45,59 @@
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-grid">
-            <div class="hero-content">
-                <div class="hero-tag animate-on-scroll">
-                    <i class="fas fa-sparkles"></i> Empowering Women Since 2018
-                </div>
-                <h1 class="hero-title animate-on-scroll">
-                    She Can<br><span class="highlight">Foundation</span>
-                </h1>
-                <p class="hero-description animate-on-scroll">
-                    Empowering women to build a brighter future through education, opportunities, and unwavering
-                    support.
-                </p>
-                <div class="hero-buttons animate-on-scroll">
-                    <a href="volunteer.html" class="btn btn-primary">
-                        <span>Join Us</span><i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="about.html" class="btn btn-outline"><span>Learn More</span></a>
-                </div>
-                <div class="hero-stats animate-on-scroll">
-                    <div class="hero-stat">
-                        <h3>500+</h3>
-                        <p>Volunteers</p>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <!-- Floating geometric shapes -->
+        <div class="shape shape-circle-1 float-slow"></div>
+        <div class="shape shape-circle-2 float-reverse"></div>
+        <div class="shape shape-dots float-fast"></div>
+
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text" data-aos="fade-right">
+                    <span class="section-tag">Empowering Change</span>
+                    <h1 class="hero-title">She Can <span class="gradient-text">Foundation</span></h1>
+                    <p class="hero-description"><span class="typing-text"></span></p>
+                    
+                    <div class="hero-buttons">
+                        <a href="volunteer.html" class="btn btn-primary"><span>Join Us</span><i class="fas fa-arrow-right"></i></a>
+                        <a href="about.html" class="btn btn-white"><span>Our Story</span><i class="fas fa-heart"></i></a>
                     </div>
-                    <div class="hero-stat">
-                        <h3>1000+</h3>
-                        <p>Women Supported</p>
-                    </div>
-                    <div class="hero-stat">
-                        <h3>50+</h3>
-                        <p>Workshops</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual animate-on-scroll">
-                <div class="hero-image-wrapper">
-                    <img src="images/empowerment.jpg" alt="Women empowerment"
-                        onerror="this.style.display='none'; this.parentElement.querySelector('.hero-image-placeholder').style.display='flex';">
-                    <div class="hero-image-placeholder" style="display:none;">
-                        <i class="fas fa-image"></i>
-                        <span>Add empowerment.jpg</span>
-                    </div>
-                </div>
-                <div class="hero-float-card card-1 glass">
-                    <div class="float-card-content">
-                        <div class="float-card-icon"><i class="fas fa-hands-helping"></i></div>
-                        <div class="float-card-text">
+
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <h4>1200+</h4>
+                            <p>Women Guided</p>
+                        </div>
+                        <div class="hero-stat">
                             <h4>500+</h4>
-                            <p>Active Volunteers</p>
+                            <p>Volunteers</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h4>25+</h4>
+                            <p>Communities</p>
                         </div>
                     </div>
                 </div>
-                <div class="hero-float-card card-2 glass">
-                    <div class="float-card-content">
-                        <div class="float-card-icon"><i class="fas fa-heart"></i></div>
-                        <div class="float-card-text">
-                            <h4>1000+</h4>
-                            <p>Lives Changed</p>
+
+                <div class="hero-visual" data-aos="fade-left">
+                    <img class="hero-main-img" src="images/hero-women.png" alt="Empowered women celebrating together" 
+                        onerror="this.style.display='none'; this.parentElement.innerHTML+='<div style=\'width:360px;height:360px;border-radius:24px;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;color:var(--primary)\'><i class=\'fas fa-people-roof\' style=\'font-size:4rem\'></i></div>';">
+                    
+                    <!-- Floating glassmorphism cards -->
+                    <div class="hero-float-card card-1 glass-card float-slow">
+                        <div class="float-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="float-card-info">
+                            <h5>Education</h5>
+                            <p>Scholarship programs</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-float-card card-2 glass-card float-reverse">
+                        <div class="float-card-icon"><i class="fas fa-handshake-angle"></i></div>
+                        <div class="float-card-info">
+                            <h5>Mentorship</h5>
+                            <p>Industry-linked sessions</p>
                         </div>
                     </div>
                 </div>
@@ -103,125 +105,151 @@
         </div>
     </section>
 
-    <!-- QUICK INTRO -->
-    <section class="intro">
+    <!-- INTRO SECTION -->
+    <section class="intro-section">
         <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-tag">What We Do</span>
-                <h2 class="section-title">Building a Better Tomorrow</h2>
-                <p class="section-subtitle">We support women through three core pillars that drive real, lasting change.
-                </p>
-            </div>
             <div class="intro-grid">
-                <div class="intro-card animate-on-scroll">
-                    <div class="intro-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>Education</h3>
-                    <p>Providing access to quality education and skill development programs for women of all ages.</p>
+                <div class="intro-visual" data-aos="fade-right">
+                    <img src="images/empowerment.jpg" alt="Women attending skill session"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'height:320px;background:var(--secondary-soft);display:flex;align-items:center;justify-content:center;color:var(--secondary)\'><i class=\'fas fa-briefcase\' style=\'font-size:3rem\'></i></div>';">
                 </div>
-                <div class="intro-card animate-on-scroll">
-                    <div class="intro-icon"><i class="fas fa-users"></i></div>
-                    <h3>Mentorship</h3>
-                    <p>Connecting women with experienced mentors who guide them toward personal and professional growth.
-                    </p>
-                </div>
-                <div class="intro-card animate-on-scroll">
-                    <div class="intro-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                    <h3>Community</h3>
-                    <p>Building supportive communities where women uplift each other and create opportunities together.
-                    </p>
+                <div class="intro-text" data-aos="fade-left">
+                    <span class="section-tag">Who We Are</span>
+                    <h2 class="section-title">Enabling Independent Livelihoods</h2>
+                    <p class="section-subtitle" style="margin-bottom: 24px;">She Can Foundation is built upon a fundamental vision: a world where every woman has access to the resources, learning hubs, and mentorship required to secure a self-sustaining future.</p>
+                    <p style="color: var(--text-light); font-size: 0.92rem; margin-bottom: 32px; line-height: 1.7;">From computer training modules and basic literacy scholarship aids to public leadership networks, our initiatives aim directly at eliminating gender disparities and building active self-reliance.</p>
+                    <a href="about.html" class="btn btn-primary"><span>Meet Our Leaders</span><i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- IMPACT STATS -->
-    <section class="impact-section" id="impact">
+    <!-- FEATURED PROGRAMS SECTION -->
+    <section class="featured-programs">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <span class="section-tag">Our Impact</span>
-                <h2 class="section-title">Numbers That Matter</h2>
+                <span class="section-tag">Programs Preview</span>
+                <h2 class="section-title">Featured Focus Areas</h2>
+                <p class="section-subtitle">A preview of the structured initiatives we manage for comprehensive social development.</p>
             </div>
-            <div class="stats-grid">
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3 class="stat-number" data-target="500">0</h3><span class="stat-plus">+</span>
-                    <p class="stat-label">Active Volunteers</p>
+
+            <div class="preview-grid">
+                <!-- Preview 1 -->
+                <div class="preview-card" data-aos="fade-up">
+                    <div class="preview-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h4>Women's Education</h4>
+                    <p>Basic educational aid, scholarships, and scholarship drives for girls in community schools.</p>
+                    <a href="programs.html" class="preview-card-link"><span>Read Program</span><i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-icon"><i class="fas fa-female"></i></div>
-                    <h3 class="stat-number" data-target="1000">0</h3><span class="stat-plus">+</span>
-                    <p class="stat-label">Women Supported</p>
+
+                <!-- Preview 2 -->
+                <div class="preview-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="preview-card-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <h4>Leadership Workshops</h4>
+                    <p>Confidence drills, vision setting, and management training for high-potential mentors.</p>
+                    <a href="programs.html" class="preview-card-link"><span>Read Program</span><i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3 class="stat-number" data-target="50">0</h3><span class="stat-plus">+</span>
-                    <p class="stat-label">Workshops Held</p>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-icon"><i class="fas fa-globe-americas"></i></div>
-                    <h3 class="stat-number" data-target="25">0</h3><span class="stat-plus">+</span>
-                    <p class="stat-label">Communities Reached</p>
+
+                <!-- Preview 3 -->
+                <div class="preview-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="preview-card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h4>Digital Literacy</h4>
+                    <p>Vital web navigation, spreadsheets training, and essential coding classes for job listings.</p>
+                    <a href="programs.html" class="preview-card-link"><span>Read Program</span><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
+    <!-- COUNTER STATS SECTION -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <!-- Stat 1 -->
+                <div class="stat-card" data-aos="zoom-in">
+                    <div class="stat-number" data-target="500">0</div>
+                    <p>Active Volunteers</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number" data-target="1200">0</div>
+                    <p>Women Empowered</p>
+                </div>
+                <!-- Stat 3 -->
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number" data-target="80">0</div>
+                    <p>Workshops Held</p>
+                </div>
+                <!-- Stat 4 -->
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number" data-target="25">0</div>
+                    <p>Communities Served</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
     <section class="testimonials-section">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <span class="section-tag">Testimonials</span>
-                <h2 class="section-title">Voices of Change</h2>
+                <span class="section-tag">Impact Stories</span>
+                <h2 class="section-title">What Our Community Says</h2>
+                <p class="section-subtitle">Real experiences shared by graduates and support personnel across Mumbai.</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">"She Can Foundation gave me the confidence and skills I needed to start
-                        my own business. Today, I employ five other women from my community."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
-                        <div class="author-info">
-                            <h4>Priya Sharma</h4><span>Entrepreneur</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">"Volunteering here changed my perspective. Seeing the impact of
-                        education on women's lives has been the most rewarding experience."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
-                        <div class="author-info">
-                            <h4>Ananya Patel</h4><span>Volunteer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">"The mentorship program helped me complete my education and pursue my
-                        dream of becoming a software engineer. I'm forever grateful."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
-                        <div class="author-info">
-                            <h4>Meera Joshi</h4><span>Software Engineer</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CTA BANNER -->
-    <section class="cta-banner">
-        <div class="container">
-            <div class="cta-wrapper animate-on-scroll">
-                <div class="cta-text">
-                    <h2>Ready to Make a Difference?</h2>
-                    <p>Join our community of changemakers and help empower women everywhere.</p>
+            <!-- Testimonials slider carousel -->
+            <div class="testimonials-slider animate-on-scroll">
+                <div class="slider-track-container">
+                    <div class="slider-track">
+                        <!-- Slide 1 -->
+                        <div class="slide-item">
+                            <div class="slide-quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="slide-quote">"She Can Foundation changed my perspective. I learned vocational sewing skills and now operate a small business from home supporting my children."</p>
+                            <h4 class="slide-author-name">Rekha Sharma</h4>
+                            <p class="slide-author-role">Vocational Graduate</p>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="slide-item">
+                            <div class="slide-quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="slide-quote">"The digital literacy class was life-changing. I had never touched a computer, and now I use email and spreadsheets confidently for my clerical job."</p>
+                            <h4 class="slide-author-name">Anjali Patil</h4>
+                            <p class="slide-author-role">Tech Skills Graduate</p>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="slide-item">
+                            <div class="slide-quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="slide-quote">"The leadership mentors at the foundation gave me the confidence to apply for administrative positions and speak in public."</p>
+                            <h4 class="slide-author-name">Priya Nadar</h4>
+                            <p class="slide-author-role">Leadership Mentorship Alumna</p>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="slide-item">
+                            <div class="slide-quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="slide-quote">"Seeing young girls receive basic school scholarships fills me with hope. Our community is growing stronger daily."</p>
+                            <h4 class="slide-author-name">Meera Deshmukh</h4>
+                            <p class="slide-author-role">Community Organizer</p>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="slide-item">
+                            <div class="slide-quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="slide-quote">"As a volunteer mentor, witnessing a student complete her first computer course and get hired is the most rewarding feeling."</p>
+                            <h4 class="slide-author-name">Sonal Iyer</h4>
+                            <p class="slide-author-role">Active Volunteer Mentor</p>
+                        </div>
+                    </div>
                 </div>
-                <a href="volunteer.html" class="btn btn-white">
-                    <span>Volunteer Now</span><i class="fas fa-arrow-right"></i>
-                </a>
+
+                <!-- Slider Arrows -->
+                <button class="slider-btn btn-prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn btn-next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+
+                <!-- Slider Indicators Dots -->
+                <div class="slider-dots"></div>
             </div>
         </div>
     </section>
@@ -236,8 +264,7 @@
                             <span class="logo-icon"><i class="fas fa-heart"></i></span>
                             <span class="logo-text">She Can</span>
                         </a>
-                        <p class="footer-description">Empowering women through education, mentorship, and
-                            community-driven initiatives.</p>
+                        <p class="footer-description">Empowering women through education, mentorship, and community-driven initiatives.</p>
                         <div class="footer-socials">
                             <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -250,25 +277,26 @@
                         <ul class="footer-links">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
+                            <li><a href="programs.html">Programs</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="volunteer.html">Volunteer</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-links-group">
                         <h4>Programs</h4>
                         <ul class="footer-links">
-                            <li><a href="#">Education</a></li>
-                            <li><a href="#">Mentorship</a></li>
-                            <li><a href="#">Workshops</a></li>
-                            <li><a href="#">Leadership</a></li>
+                            <li><a href="programs.html">Education</a></li>
+                            <li><a href="programs.html">Mentorship</a></li>
+                            <li><a href="programs.html">Workshops</a></li>
+                            <li><a href="programs.html">Leadership</a></li>
                         </ul>
                     </div>
                     <div class="footer-contact">
                         <h4>Contact Us</h4>
                         <ul class="contact-list">
-                            <li><i class="fas fa-envelope"></i><a
-                                    href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a></li>
-                            <li><i class="fas fa-phone"></i><span>+91 98765 xxxxx</span></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a></li>
+                            <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
                             <li><i class="fas fa-map-marker-alt"></i><span>Mumbai, Maharashtra, India</span></li>
                         </ul>
                     </div>
@@ -277,14 +305,18 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2024 She Can Foundation. All rights reserved. Made with <i class="fas fa-heart"></i> for women
-                    everywhere.</p>
+                <p>&copy; 2024 She Can Foundation. All rights reserved. Made with <i class="fas fa-heart"></i> for women everywhere.</p>
             </div>
         </div>
     </footer>
-
+    
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-    <script src="script.js"></script>
+
+    <!-- Premium Script Links -->
+    <script src="js/main.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/counter.js" defer></script>
+    <script src="js/typing.js" defer></script>
 </body>
 
 </html>

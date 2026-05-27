@@ -4,18 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about She Can Foundation's mission, vision, and values.">
+    <meta name="description" content="Learn about She Can Foundation's history, timeline of growth, core values, and team leaders driving change.">
     <title>About Us | She Can Foundation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Premium Stylesheet Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+    <!-- PAGE LOADER OVERLAY -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -26,8 +33,10 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="volunteer.html" class="nav-link btn-nav-cta">Join Us</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -37,59 +46,174 @@
     </nav>
 
     <!-- PAGE HERO -->
-    <section class="page-hero">
-        <div class="container">
-            <span class="section-tag animate-on-scroll">Who We Are</span>
-            <h1 class="section-title animate-on-scroll">About She Can Foundation</h1>
-            <p class="section-subtitle animate-on-scroll">Dedicated to empowering women through education, mentorship,
-                and community.</p>
+    <section class="about-page-hero">
+        <div class="about-hero-shape about-shape-1 float-slow"></div>
+        <div class="about-hero-shape about-shape-2 float-reverse"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <span class="section-tag" data-aos="fade-up">Who We Are</span>
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">About She Can <span class="gradient-text">Foundation</span></h1>
+            <p class="section-subtitle" style="margin: 0 auto;" data-aos="fade-up" data-aos-delay="200">A structured team working together since 2018 to elevate underrepresented communities.</p>
         </div>
     </section>
 
-    <!-- ABOUT CONTENT -->
+    <!-- STORY SECTION -->
     <section class="about-section">
         <div class="container">
             <div class="about-content">
-                <div class="about-text animate-on-scroll">
-                    <h3>Our Story</h3>
-                    <p><strong>She Can Foundation</strong> is dedicated to supporting women through education,
-                        mentorship, and community-driven initiatives that create equal opportunities for growth.</p>
-                    <p>We believe every woman has the power to transform her life and her community when given the right
-                        tools and support. Founded with a vision of a world where every woman can reach her full
-                        potential, we work tirelessly to break down barriers and build bridges to a more equitable
-                        future.</p>
-                    <p>Since 2018, we have touched the lives of over 1000 women across 25+ communities, providing
-                        workshops, skill training, and leadership programs.</p>
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Our Visionary Story</h3>
+                    <p><strong>She Can Foundation</strong> was established with a singular focus: to offer actionable resources, community learning frameworks, and structured mentorship programs to women seeking absolute self-reliance.</p>
+                    <p>We work closely with community leaders to identify specific blocks where women are kept out of basic employment due to lack of educational resources or tech skills. By setting up physical vocational hubs and offering tablet learning kits, we enable students to learn sewing, accounting, or fundamental computer skills at their own pace.</p>
+                    <p>Since our inception in Mumbai, we have empowered over 1200 women through certifications, leading to small business setups or office jobs.</p>
                 </div>
-                <div class="about-image animate-on-scroll">
-                    <img src="images/empowerment.jpg" alt="Women empowerment"
-                        onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-image\'></i>';">
+                <div class="about-image" data-aos="fade-left">
+                    <img src="images/empowerment.jpg" alt="Mentoring circle meeting"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'height:320px;background:var(--primary-soft)\'></div>';">
                 </div>
             </div>
 
-            <!-- MISSION & VISION -->
-            <div class="section-header animate-on-scroll" style="margin-top: 20px;">
-                <span class="section-tag">Our Pillars</span>
-                <h2 class="section-title">Mission, Vision & Values</h2>
+            <!-- CORE PILLARS Grid -->
+            <div class="section-header animate-on-scroll" style="margin-top: 40px;">
+                <span class="section-tag">Values</span>
+                <h2 class="section-title">Pillars of Operation</h2>
             </div>
+
             <div class="values-grid">
-                <div class="value-card animate-on-scroll">
+                <!-- Pillar 1 -->
+                <div class="value-card" data-aos="fade-up">
                     <div class="value-icon"><i class="fas fa-bullseye"></i></div>
                     <h4>Our Mission</h4>
-                    <p>To empower women through accessible education, skill development, and leadership programs that
-                        foster independence and self-confidence.</p>
+                    <p>To deliver certified training courses, financial scholarships, and mentor matches that break barriers and open independent paths.</p>
                 </div>
-                <div class="value-card animate-on-scroll">
+
+                <!-- Pillar 2 -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="value-icon"><i class="fas fa-eye"></i></div>
                     <h4>Our Vision</h4>
-                    <p>A world where every woman has the freedom, resources, and support to pursue her dreams and create
-                        lasting positive change.</p>
+                    <p>A world where gender or economic background doesn't limit a woman's capacity to pursue leadership and build her dreams.</p>
                 </div>
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon"><i class="fas fa-gem"></i></div>
-                    <h4>Our Values</h4>
-                    <p>Equality, compassion, resilience, and community — these pillars guide everything we do as we work
-                        toward inclusion.</p>
+
+                <!-- Pillar 3 -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h4>Our Core Values</h4>
+                    <p>Integrity in program management, empathy in community support, and complete transparent accountability in operation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Milestones</span>
+                <h2 class="section-title">Timeline of Impact</h2>
+                <p class="section-subtitle">A chronological record of our foundation milestones and expansion.</p>
+            </div>
+            
+            <div class="timeline">
+                <!-- Year 1 -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-badge">2018</div>
+                    <div class="timeline-panel">
+                        <h4>Foundation Started</h4>
+                        <p>Opened She Can Foundation in Mumbai, starting with an active force of 10 volunteer mentors guiding 20 adult sewing students.</p>
+                    </div>
+                </div>
+
+                <!-- Year 2 -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-badge">2020</div>
+                    <div class="timeline-panel">
+                        <h4>Tablet learning Program</h4>
+                        <p>Adapted to virtual teaching, distributing basic learning tablets and supporting 300+ students through remote mentorship tracks.</p>
+                    </div>
+                </div>
+
+                <!-- Year 3 -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-badge">2022</div>
+                    <div class="timeline-panel">
+                        <h4>Central vocational hub</h4>
+                        <p>Inaugurated a dedicated vocational skill training hub with active computer classrooms and handicraft design labs in Mumbai.</p>
+                    </div>
+                </div>
+
+                <!-- Year 4 -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-badge">2024</div>
+                    <div class="timeline-panel">
+                        <h4>1200+ Graduates Milestone</h4>
+                        <p>Celebrated certifiying 1,200+ female graduates from all our computer literacy and sewing courses, supported by 500+ volunteers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION with 4 cards -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Our Leaders</span>
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">Dedicated operational experts directing our programs and volunteering actions.</p>
+            </div>
+
+            <div class="team-banner animate-on-scroll" style="margin-bottom: 60px;">
+                <img src="images/about-team.png" alt="Operational team organizing workshop resources" 
+                    onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'team-banner-placeholder\'><i class=\'fas fa-people-group\'></i><span>She Can Foundation Active Team Leaders</span></div>';">
+            </div>
+
+            <div class="team-grid-4">
+                <!-- Member 1 -->
+                <div class="team-card" data-aos="fade-up">
+                    <div class="team-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h4>Sarah D'Souza</h4>
+                    <p class="role">Founder & President</p>
+                    <p class="bio">Passionate social entrepreneur directing core NGO partnerships and programmatic goals since 2018.</p>
+                    <div class="team-socials">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-avatar"><i class="fas fa-user-doctor"></i></div>
+                    <h4>Dr. Meera Ranade</h4>
+                    <p class="role">Director of Programs</p>
+                    <p class="bio">Curriculum designer specializing in structuring vocational sewing and tech class syllabus models.</p>
+                    <div class="team-socials">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-avatar"><i class="fas fa-user-gear"></i></div>
+                    <h4>Priya Mehta</h4>
+                    <p class="role">Volunteer Coordinator</p>
+                    <p class="bio">Operations coordinator aligning mentor schedules and managing volunteers registration drives.</p>
+                    <div class="team-socials">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-avatar"><i class="fas fa-user-group"></i></div>
+                    <h4>Sonal Sen</h4>
+                    <p class="role">Communications Director</p>
+                    <p class="bio">Outreach manager coordinating public awareness campaigns, community drives, and social updates.</p>
+                    <div class="team-socials">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,8 +229,7 @@
                             <span class="logo-icon"><i class="fas fa-heart"></i></span>
                             <span class="logo-text">She Can</span>
                         </a>
-                        <p class="footer-description">Empowering women through education, mentorship, and
-                            community-driven initiatives.</p>
+                        <p class="footer-description">Empowering women through education, mentorship, and community-driven initiatives.</p>
                         <div class="footer-socials">
                             <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -119,25 +242,26 @@
                         <ul class="footer-links">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
+                            <li><a href="programs.html">Programs</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="volunteer.html">Volunteer</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-links-group">
                         <h4>Programs</h4>
                         <ul class="footer-links">
-                            <li><a href="#">Education</a></li>
-                            <li><a href="#">Mentorship</a></li>
-                            <li><a href="#">Workshops</a></li>
-                            <li><a href="#">Leadership</a></li>
+                            <li><a href="programs.html">Education</a></li>
+                            <li><a href="programs.html">Mentorship</a></li>
+                            <li><a href="programs.html">Workshops</a></li>
+                            <li><a href="programs.html">Leadership</a></li>
                         </ul>
                     </div>
                     <div class="footer-contact">
                         <h4>Contact Us</h4>
                         <ul class="contact-list">
-                            <li><i class="fas fa-envelope"></i><a
-                                    href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a></li>
-                            <li><i class="fas fa-phone"></i><span>+91 98765 xxxxx</span></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a></li>
+                            <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
                             <li><i class="fas fa-map-marker-alt"></i><span>Mumbai, Maharashtra, India</span></li>
                         </ul>
                     </div>
@@ -146,13 +270,15 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2024 She Can Foundation. All rights reserved. Made with <i class="fas fa-heart"></i> for women
-                    everywhere.</p>
+                <p>&copy; 2024 She Can Foundation. All rights reserved. Made with <i class="fas fa-heart"></i> for women everywhere.</p>
             </div>
         </div>
     </footer>
+    
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-    <script src="script.js"></script>
+
+    <!-- Premium Script Links -->
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

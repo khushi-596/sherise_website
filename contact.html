@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with She Can Foundation. Ask questions, send feedback, or reach our Mumbai headquarters.">
+    <title>Contact Us | She Can Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Premium Stylesheet Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- PAGE LOADER OVERLAY -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-heart"></i></span>
+                <span class="logo-text">She Can</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="volunteer.html" class="nav-link btn-nav-cta">Join Us</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-tag" data-aos="fade-up">Get In Touch</span>
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">Contact <span class="gradient-text">She Can</span></h1>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Have questions about our initiatives, workshops, or volunteering? Reach out, we are here to help.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT CARDS INFO -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-cards-grid">
+                <!-- Info 1 -->
+                <div class="contact-info-card" data-aos="fade-up">
+                    <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Email Us</h4>
+                    <p>Send your queries anytime</p>
+                    <a href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a>
+                </div>
+
+                <!-- Info 2 -->
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                    <h4>Call Us</h4>
+                    <p>Mon to Fri from 9am to 6pm</p>
+                    <span>+91 98765 43210</span>
+                </div>
+
+                <!-- Info 3 -->
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-icon"><i class="fas fa-map-location-dot"></i></div>
+                    <h4>Visit Us</h4>
+                    <p>Our central Mumbai center</p>
+                    <span>Mumbai, Maharashtra, India</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM & MAP -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Form wrapper -->
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <h3>Send a Message</h3>
+                    <p class="form-intro">Fill out the form below and our team will get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <!-- Name Input -->
+                        <div class="form-group">
+                            <label class="form-label" for="contactName">Full Name</label>
+                            <input class="form-input" type="text" id="contactName" placeholder="Your name">
+                            <span class="error-message" id="contactNameError">Please enter your full name.</span>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="form-group">
+                            <label class="form-label" for="contactEmail">Email Address</label>
+                            <input class="form-input" type="email" id="contactEmail" placeholder="you@example.com">
+                            <span class="error-message" id="contactEmailError">Please enter a valid email address.</span>
+                        </div>
+
+                        <!-- Subject Input -->
+                        <div class="form-group">
+                            <label class="form-label" for="contactSubject">Subject</label>
+                            <input class="form-input" type="text" id="contactSubject" placeholder="What is this about?">
+                            <span class="error-message" id="contactSubjectError">Please enter a subject topic.</span>
+                        </div>
+
+                        <!-- Message Input -->
+                        <div class="form-group">
+                            <label class="form-label" for="contactMessage">Message</label>
+                            <textarea class="form-textarea" id="contactMessage" rows="5" placeholder="Write your message here..."></textarea>
+                            <span class="error-message" id="contactMessageError">Please write a message description.</span>
+                        </div>
+
+                        <button class="btn btn-primary btn-submit" type="submit">
+                            <span>Send Message</span><i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (Accordion) -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Common Inquiries</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find immediate answers regarding volunteering, program enrollments, and support.</p>
+            </div>
+            
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-header">
+                        <h4>Who can enroll in She Can Foundation programs?</h4>
+                        <div class="faq-icon-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-content">
+                        <p>All programs are completely free and open to young girls, women, and mothers seeking skill development, computer literacy, or academic scholarship support. Simply reach out or visit our center.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-header">
+                        <h4>What is the duration of the vocational and computer courses?</h4>
+                        <div class="faq-icon-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-content">
+                        <p>Our core vocational and digital technology skills courses run for 12 weeks, with lessons twice a week. We also hold individual weekend workshops on leadership and legal rights.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-header">
+                        <h4>How can I apply to become a volunteer mentor?</h4>
+                        <div class="faq-icon-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-content">
+                        <p>You can fill out our application form directly on the "Volunteer" page. Our volunteer coordinator reviews forms weekly and schedules orientation sessions once candidates are matched.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-header">
+                        <h4>Are the programs certified?</h4>
+                        <div class="faq-icon-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-content">
+                        <p>Yes, all graduates of our computer literacy, sewing, and leadership courses receive a signed foundation certificate verifying their course completion hours and newly acquired skills.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-header">
+                        <h4>Where do She Can Foundation donations go?</h4>
+                        <div class="faq-icon-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-content">
+                        <p>Over 85% of all received funds directly go to procuring computers, study books, vocational sewing supplies, and funding scholarship grants. We maintain complete financial records.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon"><i class="fas fa-heart"></i></span>
+                            <span class="logo-text">She Can</span>
+                        </a>
+                        <p class="footer-description">Empowering women through education, mentorship, and community-driven initiatives.</p>
+                        <div class="footer-socials">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="volunteer.html">Volunteer</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>Programs</h4>
+                        <ul class="footer-links">
+                            <li><a href="programs.html">Education</a></li>
+                            <li><a href="programs.html">Mentorship</a></li>
+                            <li><a href="programs.html">Workshops</a></li>
+                            <li><a href="programs.html">Leadership</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Us</h4>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-envelope"></i><a href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a></li>
+                            <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
+                            <li><i class="fas fa-map-marker-alt"></i><span>Mumbai, Maharashtra, India</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 She Can Foundation. All rights reserved. Made with <i class="fas fa-heart"></i> for women everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SUCCESS POPUP OVERLAY -->
+    <div class="form-success" id="successOverlay">
+        <div class="success-content">
+            <div class="success-icon"><i class="fas fa-circle-check"></i></div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. A She Can Foundation representative will get back to you shortly.</p>
+            <button class="btn btn-primary" id="successCloseBtn" style="width: 100%; justify-content: center;">Continue</button>
+        </div>
+    </div>
+    
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Premium Script Links -->
+    <script src="js/main.js" defer></script>
+    
+    <!-- Inline page logic for contact form validation & FAQ Accordion -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. FAQ ACCORDION LOGIC
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const header = item.querySelector('.faq-header');
+                header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close other active items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active', !isActive);
+                });
+            });
+
+            // 2. CONTACT FORM REAL-TIME VALIDATION
+            const form = document.getElementById('contactForm');
+            const overlay = document.getElementById('successOverlay');
+            const closeBtn = document.getElementById('successCloseBtn');
+
+            const nameInput = document.getElementById('contactName');
+            const emailInput = document.getElementById('contactEmail');
+            const subjectInput = document.getElementById('contactSubject');
+            const messageInput = document.getElementById('contactMessage');
+
+            const nameError = document.getElementById('contactNameError');
+            const emailError = document.getElementById('contactEmailError');
+            const subjectError = document.getElementById('contactSubjectError');
+            const messageError = document.getElementById('contactMessageError');
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            const validateField = (input, error, condition) => {
+                if (condition) {
+                    error.style.display = 'none';
+                    input.style.borderColor = '';
+                    return true;
+                } else {
+                    error.style.display = 'block';
+                    input.style.borderColor = '#EF4444';
+                    return false;
+                }
+            };
+
+            // Real-time listeners
+            nameInput.addEventListener('input', () => validateField(nameInput, nameError, nameInput.value.trim() !== ''));
+            emailInput.addEventListener('input', () => validateField(emailInput, emailError, emailRegex.test(emailInput.value.trim())));
+            subjectInput.addEventListener('input', () => validateField(subjectInput, subjectError, subjectInput.value.trim() !== ''));
+            messageInput.addEventListener('input', () => validateField(messageInput, messageError, messageInput.value.trim() !== ''));
+
+            // Submit handler
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const isNameValid = validateField(nameInput, nameError, nameInput.value.trim() !== '');
+                const isEmailValid = validateField(emailInput, emailError, emailRegex.test(emailInput.value.trim()));
+                const isSubjectValid = validateField(subjectInput, subjectError, subjectInput.value.trim() !== '');
+                const isMessageValid = validateField(messageInput, messageError, messageInput.value.trim() !== '');
+
+                if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+                    // Show success
+                    overlay.classList.add('show');
+                    form.reset();
+                }
+            });
+
+            closeBtn.addEventListener('click', () => {
+                overlay.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

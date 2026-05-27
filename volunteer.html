@@ -4,18 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Become a volunteer at She Can Foundation and help empower women everywhere.">
+    <meta name="description" content="Apply to become a volunteer at She Can Foundation. Check out benefits, impact areas, and join our active Mumbai force.">
     <title>Volunteer | She Can Foundation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Premium Stylesheet Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+    <!-- PAGE LOADER OVERLAY -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -26,8 +33,10 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="volunteer.html" class="nav-link active">Volunteer</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="volunteer.html" class="nav-link btn-nav-cta">Join Us</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -39,204 +48,131 @@
     <!-- PAGE HERO -->
     <section class="page-hero">
         <div class="container">
-            <span class="section-tag animate-on-scroll">Make a Difference</span>
-            <h1 class="section-title animate-on-scroll">Become a Volunteer</h1>
-            <p class="section-subtitle animate-on-scroll">Join a movement that inspires confidence, leadership, and
-                change.</p>
+            <span class="section-tag" data-aos="fade-up">Empower Others</span>
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">Join as a <span class="gradient-text">Volunteer</span></h1>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Share your digital skills, professional advice, or time to elevate women in our programs.</p>
         </div>
     </section>
 
-    <!-- VOLUNTEER SECTION -->
+    <!-- VOLUNTEER BENEFITS -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Rewards of Giving</span>
+                <h2 class="section-title">Volunteer Benefits</h2>
+                <p class="section-subtitle">How joining our volunteer force elevates you alongside our programs candidates.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <!-- Benefit 1 -->
+                <div class="benefit-card" data-aos="fade-up">
+                    <div class="benefit-icon-box"><i class="fas fa-people-arrows"></i></div>
+                    <h4>Direct Social Impact</h4>
+                    <p>Observe student growth directly as a coding teacher or vocational trainer, leaving a legacy of empowerment.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon-box"><i class="fas fa-network-wired"></i></div>
+                    <h4>Professional Network</h4>
+                    <p>Build valuable relationships and collaborate with other industry professionals, mentors, and program directors.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon-box"><i class="fas fa-star"></i></div>
+                    <h4>Experience & Growth</h4>
+                    <p>Refine your facilitation, organizational administration, and public speaking capacities while leading workshops.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VOLUNTEER CORE SECTION -->
     <section class="volunteer-section">
         <div class="container">
+            <!-- Active volunteer horizontal gallery strip -->
+            <div class="gallery-strip" data-aos="fade-up">
+                <div class="strip-card">
+                    <img src="images/volunteering.jpg" alt="Active volunteer organizing class textbooks">
+                </div>
+                <div class="strip-card">
+                    <img src="images/empowerment.jpg" alt="Volunteers conducting interactive group roundtable">
+                </div>
+                <div class="strip-card">
+                    <img src="images/outreach.png" alt="Outdoor literacy support distribution campaign">
+                </div>
+                <div class="strip-card">
+                    <img src="images/training.png" alt="Volunteers supporting students in modern computer lab">
+                </div>
+            </div>
+
             <div class="volunteer-grid">
-                <div class="volunteer-text animate-on-scroll">
-                    <h3>Help Us Make Change</h3>
-                    <p>Your time and talent can help transform the life of a woman in need. Whether you can spare a few
-                        hours a week or want to take on a bigger role, there's a place for you in our community.</p>
-                    <p>We provide full training and ongoing support so you can make the biggest impact possible.</p>
-                    <div class="volunteer-features">
-                        <div class="volunteer-feature"><i class="fas fa-check-circle"></i><span>Flexible
-                                scheduling</span></div>
-                        <div class="volunteer-feature"><i class="fas fa-check-circle"></i><span>Training provided</span>
-                        </div>
-                        <div class="volunteer-feature"><i class="fas fa-check-circle"></i><span>Community support</span>
-                        </div>
-                        <div class="volunteer-feature"><i class="fas fa-check-circle"></i><span>Certificate of
-                                recognition</span></div>
-                        <div class="volunteer-feature"><i class="fas fa-check-circle"></i><span>Networking
-                                opportunities</span></div>
-                        <div class="volunteer-feature"><i class="fas fa-check-circle"></i><span>Make a real
-                                impact</span></div>
-                    </div>
-                    <div class="volunteer-buttons">
-                        <a href="#apply" class="btn btn-primary"><span>Volunteer Now</span><i
-                                class="fas fa-arrow-right"></i></a>
-                        <a href="about.html" class="btn btn-outline"><span>Learn About Us</span></a>
-                    </div>
+                <!-- Left instructions -->
+                <div class="volunteer-intro" data-aos="fade-right">
+                    <h3 style="font-size: 1.7rem; margin-bottom: 16px;">Make a Difference</h3>
+                    <p style="color: var(--text-light); margin-bottom: 24px; line-height: 1.7;">Volunteers form the primary operational pillar of the She Can Foundation. Our community classes, leadership mentoring sessions, and resources camps are successfully coordinated due to support from dedicated people like you.</p>
+                    <p style="color: var(--text-light); margin-bottom: 28px; line-height: 1.7;">Whether you can dedicate 2 hours a week to review spreadsheets formulas with a student or lead public hygiene talks during weekends, there is a core matching spot for you.</p>
+                    
+                    <h4 style="font-size: 1.1rem; margin-bottom: 12px;"><i class="fas fa-circle-check" style="color: var(--primary); margin-right: 8px;"></i>Flexible Schedules</h4>
+                    <p style="color: var(--text-light); font-size: 0.88rem; margin-bottom: 20px;">Conduct online accounting review sessions or lead central workshops based on your free time.</p>
+
+                    <h4 style="font-size: 1.1rem; margin-bottom: 12px;"><i class="fas fa-circle-check" style="color: var(--primary); margin-right: 8px;"></i>Orientation & Training</h4>
+                    <p style="color: var(--text-light); font-size: 0.88rem;">Our volunteer managers provide full campaign briefings, manuals, and instructional materials.</p>
                 </div>
-                <div class="animate-on-scroll">
-                    <div class="volunteer-visual-card">
-                        <div class="v-icon"><i class="fas fa-heart"></i></div>
-                        <h3>Join 500+ Volunteers</h3>
-                        <p>Together, we're stronger</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- APPLICATION FORM -->
-    <section class="form-section" id="apply">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-tag">Apply Now</span>
-                <h2 class="section-title">Volunteer Application Form</h2>
-                <p class="section-subtitle">Fill out the form below and we'll get back to you within 48 hours.</p>
-            </div>
+                <!-- Form container -->
+                <div class="volunteer-form-container" data-aos="fade-left">
+                    <h3>Apply to Volunteer</h3>
+                    <p>Provide your information below and our coordinators will reach out shortly.</p>
 
-            <div class="form-wrapper animate-on-scroll">
-                <form class="volunteer-form" id="volunteerForm" novalidate>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="fullName">Full Name <span class="required">*</span></label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-user"></i>
-                                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
-                                    required>
+                    <form class="volunteer-form" id="volunteerForm" novalidate>
+                        <!-- Row 1: Name & Email -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="volName">Full Name</label>
+                                <input class="form-input" type="text" id="volName" placeholder="Your name">
+                                <span class="error-message" id="volNameError">Full name is required.</span>
                             </div>
-                            <span class="error-msg" id="fullNameError"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address <span class="required">*</span></label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-envelope"></i>
-                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            <div class="form-group">
+                                <label class="form-label" for="volEmail">Email Address</label>
+                                <input class="form-input" type="email" id="volEmail" placeholder="name@example.com">
+                                <span class="error-message" id="volEmailError">Valid email is required.</span>
                             </div>
-                            <span class="error-msg" id="emailError"></span>
                         </div>
-                    </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone Number <span class="required">*</span></label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-phone"></i>
-                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                        <!-- Row 2: Phone & Interest -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="volPhone">Phone Number</label>
+                                <input class="form-input" type="tel" id="volPhone" placeholder="10-digit number">
+                                <span class="error-message" id="volPhoneError">Valid 10-digit phone is required.</span>
                             </div>
-                            <span class="error-msg" id="phoneError"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="age">Age</label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-calendar"></i>
-                                <input type="number" id="age" name="age" placeholder="e.g. 25" min="16" max="80">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <input type="text" id="city" name="city" placeholder="Your city">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="interest">Area of Interest <span class="required">*</span></label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-heart"></i>
-                                <select id="interest" name="interest" required>
-                                    <option value="" disabled selected>Select an area</option>
-                                    <option value="education">Education & Tutoring</option>
-                                    <option value="mentorship">Mentorship</option>
-                                    <option value="workshops">Workshop Facilitation</option>
-                                    <option value="fundraising">Fundraising</option>
-                                    <option value="social-media">Social Media & Outreach</option>
-                                    <option value="events">Event Management</option>
-                                    <option value="other">Other</option>
+                            <div class="form-group">
+                                <label class="form-label" for="volInterest">Area of Interest</label>
+                                <select class="form-select" id="volInterest">
+                                    <option value="">Select your focus...</option>
+                                    <option value="education">Academic Support & Literacy</option>
+                                    <option value="vocational">Vocational Skills (Sewing, Crafts)</option>
+                                    <option value="digital">Digital & Computer Literacy</option>
+                                    <option value="mentorship">One-on-One Mentoring</option>
+                                    <option value="events">Event Coordination & Outreach</option>
                                 </select>
+                                <span class="error-message" id="volInterestError">Please select an area of interest.</span>
                             </div>
-                            <span class="error-msg" id="interestError"></span>
                         </div>
-                    </div>
 
-                    <div class="form-group full-width">
-                        <label for="availability">Availability</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="availability" value="weekdays"> Weekdays
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="availability" value="weekends"> Weekends
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="availability" value="mornings"> Mornings
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="availability" value="evenings"> Evenings
-                            </label>
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label class="form-label" for="volMessage">Why do you want to join us?</label>
+                            <textarea class="form-textarea" id="volMessage" rows="4" placeholder="Briefly describe your motivation or skills..."></textarea>
+                            <span class="error-message" id="volMessageError">Please enter a short statement.</span>
                         </div>
-                    </div>
 
-                    <div class="form-group full-width">
-                        <label for="message">Why do you want to volunteer?</label>
-                        <div class="input-wrapper textarea-wrapper">
-                            <i class="fas fa-comment-dots"></i>
-                            <textarea id="message" name="message" rows="4"
-                                placeholder="Tell us a bit about yourself and why you'd like to join..."></textarea>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
-                        <span>Submit Application</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
-
-            <!-- Success Message -->
-            <div class="form-success" id="formSuccess">
-                <div class="success-content glass">
-                    <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-                    <h3>Application Submitted!</h3>
-                    <p>Thank you for your interest in volunteering. We'll get back to you within 48 hours.</p>
-                    <button class="btn btn-primary" id="successClose">
-                        <span>Close</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- IMPACT STATS -->
-    <section class="impact-section">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-tag">Our Impact</span>
-                <h2 class="section-title">Together We've Achieved</h2>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3 class="stat-number" data-target="500">0</h3><span class="stat-plus">+</span>
-                    <p class="stat-label">Active Volunteers</p>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-icon"><i class="fas fa-female"></i></div>
-                    <h3 class="stat-number" data-target="1000">0</h3><span class="stat-plus">+</span>
-                    <p class="stat-label">Women Supported</p>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3 class="stat-number" data-target="50">0</h3><span class="stat-plus">+</span>
-                    <p class="stat-label">Workshops Held</p>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-icon"><i class="fas fa-globe-americas"></i></div>
-                    <h3 class="stat-number" data-target="25">0</h3><span class="stat-plus">+</span>
-                    <p class="stat-label">Communities Reached</p>
+                        <button class="btn btn-primary btn-submit" type="submit" style="width: 100%; justify-content: center;">
+                            <span>Submit Application</span><i class="fas fa-handshake"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -252,8 +188,7 @@
                             <span class="logo-icon"><i class="fas fa-heart"></i></span>
                             <span class="logo-text">She Can</span>
                         </a>
-                        <p class="footer-description">Empowering women through education, mentorship, and
-                            community-driven initiatives.</p>
+                        <p class="footer-description">Empowering women through education, mentorship, and community-driven initiatives.</p>
                         <div class="footer-socials">
                             <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -266,25 +201,26 @@
                         <ul class="footer-links">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
+                            <li><a href="programs.html">Programs</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="volunteer.html">Volunteer</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-links-group">
                         <h4>Programs</h4>
                         <ul class="footer-links">
-                            <li><a href="#">Education</a></li>
-                            <li><a href="#">Mentorship</a></li>
-                            <li><a href="#">Workshops</a></li>
-                            <li><a href="#">Leadership</a></li>
+                            <li><a href="programs.html">Education</a></li>
+                            <li><a href="programs.html">Mentorship</a></li>
+                            <li><a href="programs.html">Workshops</a></li>
+                            <li><a href="programs.html">Leadership</a></li>
                         </ul>
                     </div>
                     <div class="footer-contact">
                         <h4>Contact Us</h4>
                         <ul class="contact-list">
-                            <li><i class="fas fa-envelope"></i><a
-                                    href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a></li>
-                            <li><i class="fas fa-phone"></i><span>+91 98765 xxxxx</span></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a></li>
+                            <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
                             <li><i class="fas fa-map-marker-alt"></i><span>Mumbai, Maharashtra, India</span></li>
                         </ul>
                     </div>
@@ -293,13 +229,87 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2024 She Can Foundation. All rights reserved. Made with <i class="fas fa-heart"></i> for women
-                    everywhere.</p>
+                <p>&copy; 2024 She Can Foundation. All rights reserved. Made with <i class="fas fa-heart"></i> for women everywhere.</p>
             </div>
         </div>
     </footer>
+
+    <!-- SUCCESS POPUP OVERLAY -->
+    <div class="form-success" id="successOverlay">
+        <div class="success-content">
+            <div class="success-icon"><i class="fas fa-circle-check"></i></div>
+            <h3>Application Received!</h3>
+            <p>Thank you for offering your support. Our volunteer manager will review your submission and connect with you shortly.</p>
+            <button class="btn btn-primary" id="successCloseBtn" style="width: 100%; justify-content: center;">Continue</button>
+        </div>
+    </div>
+    
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-    <script src="script.js"></script>
+
+    <!-- Premium Script Links -->
+    <script src="js/main.js" defer></script>
+    
+    <!-- Client-side volunteer validation scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('volunteerForm');
+            const overlay = document.getElementById('successOverlay');
+            const closeBtn = document.getElementById('successCloseBtn');
+
+            const nameInput = document.getElementById('volName');
+            const emailInput = document.getElementById('volEmail');
+            const phoneInput = document.getElementById('volPhone');
+            const interestSelect = document.getElementById('volInterest');
+            const messageText = document.getElementById('volMessage');
+
+            const nameError = document.getElementById('volNameError');
+            const emailError = document.getElementById('volEmailError');
+            const phoneError = document.getElementById('volPhoneError');
+            const interestError = document.getElementById('volInterestError');
+            const messageError = document.getElementById('volMessageError');
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^[6789]\d{9}$/; // Valid Indian 10-digit mobile
+
+            const validateField = (input, error, condition) => {
+                if (condition) {
+                    error.style.display = 'none';
+                    input.style.borderColor = '';
+                    return true;
+                } else {
+                    error.style.display = 'block';
+                    input.style.borderColor = '#EF4444';
+                    return false;
+                }
+            };
+
+            // Real-time updates
+            nameInput.addEventListener('input', () => validateField(nameInput, nameError, nameInput.value.trim() !== ''));
+            emailInput.addEventListener('input', () => validateField(emailInput, emailError, emailRegex.test(emailInput.value.trim())));
+            phoneInput.addEventListener('input', () => validateField(phoneInput, phoneError, phoneRegex.test(phoneInput.value.trim())));
+            interestSelect.addEventListener('change', () => validateField(interestSelect, interestError, interestSelect.value !== ''));
+            messageText.addEventListener('input', () => validateField(messageText, messageError, messageText.value.trim() !== ''));
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const isNameValid = validateField(nameInput, nameError, nameInput.value.trim() !== '');
+                const isEmailValid = validateField(emailInput, emailError, emailRegex.test(emailInput.value.trim()));
+                const isPhoneValid = validateField(phoneInput, phoneError, phoneRegex.test(phoneInput.value.trim()));
+                const isInterestValid = validateField(interestSelect, interestError, interestSelect.value !== '');
+                const isMessageValid = validateField(messageText, messageError, messageText.value.trim() !== '');
+
+                if (isNameValid && isEmailValid && isPhoneValid && isInterestValid && isMessageValid) {
+                    overlay.classList.add('show');
+                    form.reset();
+                }
+            });
+
+            closeBtn.addEventListener('click', () => {
+                overlay.classList.remove('show');
+            });
+        });
+    </script>
 </body>
 
 </html>

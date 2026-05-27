@@ -4,19 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="See the impact of She Can Foundation through our gallery of empowerment, volunteering, and education.">
+    <meta name="description" content="View the direct impact of She Can Foundation programs through our active community gallery.">
     <title>Gallery | She Can Foundation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Premium Stylesheet Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+    <!-- PAGE LOADER OVERLAY -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -27,8 +33,10 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
                 <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
                 <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="volunteer.html" class="nav-link btn-nav-cta">Join Us</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -40,76 +48,121 @@
     <!-- PAGE HERO -->
     <section class="page-hero">
         <div class="container">
-            <span class="section-tag animate-on-scroll">Our Work</span>
-            <h1 class="section-title animate-on-scroll">Gallery</h1>
-            <p class="section-subtitle animate-on-scroll">A glimpse into how we're making a difference every day.</p>
+            <span class="section-tag" data-aos="fade-up">Our Work</span>
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">Impact <span class="gradient-text">Gallery</span></h1>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">A visual look into the workshops and empowerment drives held across the region.</p>
         </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- GALLERY SECTION -->
     <section class="gallery-section">
         <div class="container">
+            <!-- Filter buttons -->
+            <div class="gallery-filters animate-on-scroll" style="margin-bottom: 50px;">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="empowerment">Empowerment</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+            </div>
+
+            <!-- Staggered Masonry grid -->
             <div class="gallery-grid">
-                <div class="gallery-card animate-on-scroll">
+                <!-- Item 1 -->
+                <div class="gallery-card" data-category="empowerment" data-aos="fade-up">
                     <div class="gallery-image">
-                        <img src="images/empowerment.jpg" alt="Women empowerment initiative"
-                            onerror="this.style.display='none'; this.parentElement.innerHTML+='<i class=\'fas fa-hand-fist\' style=\'font-size:2rem;color:var(--accent)\'></i>';">
+                        <img src="images/empowerment.jpg" alt="Mentorship sessions developing core leadership confidence">
                         <div class="gallery-overlay">
-                            <div class="gallery-label"><i class="fas fa-hand-fist"></i><span>Women Empowerment</span>
-                            </div>
+                            <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
                         </div>
                     </div>
                     <div class="gallery-info">
-                        <h3>Empowering Women</h3>
-                        <p>Building confidence and leadership through tailored programs and mentorship.</p>
+                        <h3>Mentorship Circle</h3>
+                        <p>Weekly small group discussion roundtables fostering confidence and mutual support.</p>
                     </div>
                 </div>
 
-                <div class="gallery-card animate-on-scroll">
+                <!-- Item 2 -->
+                <div class="gallery-card" data-category="community" data-aos="fade-up" data-aos-delay="100">
                     <div class="gallery-image">
-                        <img src="images/volunteering.jpg" alt="NGO volunteering activities"
-                            onerror="this.style.display='none'; this.parentElement.innerHTML+='<i class=\'fas fa-people-group\' style=\'font-size:2rem;color:var(--accent)\'></i>';">
+                        <img src="images/volunteering.jpg" alt="Active community volunteer coordinates planning session">
                         <div class="gallery-overlay">
-                            <div class="gallery-label"><i class="fas fa-people-group"></i><span>Volunteering</span>
-                            </div>
+                            <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
                         </div>
                     </div>
                     <div class="gallery-info">
                         <h3>Community Volunteering</h3>
-                        <p>Our volunteers are the heart of our mission — driving change every day.</p>
+                        <p>Our dedicated volunteers laying down regional strategies for new hubs.</p>
                     </div>
                 </div>
 
-                <div class="gallery-card animate-on-scroll">
+                <!-- Item 3 -->
+                <div class="gallery-card" data-category="education" data-aos="fade-up" data-aos-delay="200">
                     <div class="gallery-image">
-                        <img src="images/education.jpg" alt="Education and support programs"
-                            onerror="this.style.display='none'; this.parentElement.innerHTML+='<i class=\'fas fa-graduation-cap\' style=\'font-size:2rem;color:var(--accent)\'></i>';">
+                        <img src="images/education.jpg" alt="Adult scholarship students reading textbooks in study library">
                         <div class="gallery-overlay">
-                            <div class="gallery-label"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
+                            <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
                         </div>
                     </div>
                     <div class="gallery-info">
-                        <h3>Education & Support</h3>
-                        <p>Providing access to quality education and lifelong learning opportunities.</p>
+                        <h3>Scholarship Studies</h3>
+                        <p>Providing adult study textbooks and quiet reading spaces in suburban areas.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-card" data-category="empowerment" data-aos="fade-up">
+                    <div class="gallery-image">
+                        <img src="images/leadership.png" alt="Vision boards created during leadership training camps">
+                        <div class="gallery-overlay">
+                            <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Leadership Camps</h3>
+                        <p>Students designing planning drafts and public administration goals.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-card" data-category="community" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-image">
+                        <img src="images/outreach.png" alt="Distribution of literacy study sheets in outdoor school">
+                        <div class="gallery-overlay">
+                            <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Outreach Operations</h3>
+                        <p>Distributing vital study sheets and supplies directly to suburban neighborhoods.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-card" data-category="education" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-image">
+                        <img src="images/training.png" alt="Computer classrooms training students in online navigation">
+                        <div class="gallery-overlay">
+                            <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Digital Tech Class</h3>
+                        <p>Practical keyboard training and spreadsheets logic for prospective secretaries.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-banner">
-        <div class="container">
-            <div class="cta-wrapper animate-on-scroll">
-                <div class="cta-text">
-                    <h2>Want to be part of these stories?</h2>
-                    <p>Join us and help create more impact in communities across India.</p>
-                </div>
-                <a href="volunteer.html" class="btn btn-white"><span>Join Now</span><i
-                        class="fas fa-arrow-right"></i></a>
-            </div>
+    <!-- GALLERY LIGHTBOX MODAL -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close Preview"><i class="fas fa-xmark"></i></button>
+        <div class="lightbox-content">
+            <img class="lightbox-img" id="lightboxImg" src="" alt="Full preview image">
+            <div class="lightbox-caption" id="lightboxCaption">Caption text</div>
         </div>
-    </section>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -121,8 +174,7 @@
                             <span class="logo-icon"><i class="fas fa-heart"></i></span>
                             <span class="logo-text">She Can</span>
                         </a>
-                        <p class="footer-description">Empowering women through education, mentorship, and
-                            community-driven initiatives.</p>
+                        <p class="footer-description">Empowering women through education, mentorship, and community-driven initiatives.</p>
                         <div class="footer-socials">
                             <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -135,25 +187,26 @@
                         <ul class="footer-links">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
+                            <li><a href="programs.html">Programs</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="volunteer.html">Volunteer</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-links-group">
                         <h4>Programs</h4>
                         <ul class="footer-links">
-                            <li><a href="#">Education</a></li>
-                            <li><a href="#">Mentorship</a></li>
-                            <li><a href="#">Workshops</a></li>
-                            <li><a href="#">Leadership</a></li>
+                            <li><a href="programs.html">Education</a></li>
+                            <li><a href="programs.html">Mentorship</a></li>
+                            <li><a href="programs.html">Workshops</a></li>
+                            <li><a href="programs.html">Leadership</a></li>
                         </ul>
                     </div>
                     <div class="footer-contact">
                         <h4>Contact Us</h4>
                         <ul class="contact-list">
-                            <li><i class="fas fa-envelope"></i><a
-                                    href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a></li>
-                            <li><i class="fas fa-phone"></i><span>+91 98765 xxxxx</span></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:hello@shecanfoundation.org">hello@shecanfoundation.org</a></li>
+                            <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
                             <li><i class="fas fa-map-marker-alt"></i><span>Mumbai, Maharashtra, India</span></li>
                         </ul>
                     </div>
@@ -162,13 +215,88 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2024 She Can Foundation. All rights reserved. Made with <i class="fas fa-heart"></i> for women
-                    everywhere.</p>
+                <p>&copy; 2024 She Can Foundation. All rights reserved. Made with <i class="fas fa-heart"></i> for women everywhere.</p>
             </div>
         </div>
     </footer>
+    
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-    <script src="script.js"></script>
+
+    <!-- Premium Script Links -->
+    <script src="js/main.js" defer></script>
+    
+    <!-- Lightbox Modal and Category Filters Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. FILTERING SYSTEM
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.gallery-card');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button classes
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const category = btn.getAttribute('data-filter');
+
+                    cards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'all' || cardCategory === category) {
+                            card.classList.remove('hide');
+                            // Small re-trigger for entrance transitions
+                            card.style.opacity = '1';
+                        } else {
+                            card.classList.add('hide');
+                        }
+                    });
+                });
+            });
+
+            // 2. LIGHTBOX INTERACTIVE PREVIEW MODAL
+            const modal = document.getElementById('lightboxModal');
+            const modalImg = document.getElementById('lightboxImg');
+            const modalCaption = document.getElementById('lightboxCaption');
+            const closeBtn = document.getElementById('lightboxClose');
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const img = card.querySelector('img');
+                    const title = card.querySelector('h3');
+                    const desc = card.querySelector('p');
+
+                    if (img && modal) {
+                        modalImg.src = img.src;
+                        modalImg.alt = img.alt;
+                        modalCaption.textContent = title.textContent + " - " + desc.textContent;
+                        
+                        modal.classList.add('show');
+                        document.body.style.overflow = 'hidden'; // lock scroll
+                    }
+                });
+            });
+
+            const closeModal = () => {
+                if (modal) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
+            };
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    // Close if clicking outside the image content box
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

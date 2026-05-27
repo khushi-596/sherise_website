@@ -1,0 +1,150 @@
+/* ==========================================
+   CSS SYSTEM - RESPONSIVE STYLES & OVERRIDES
+   ========================================== */
+
+/* --- TABLETS / MEDIUM SCREENS (1200px down) --- */
+@media (max-width: 1200px) {
+    .container {
+        width: 92%;
+    }
+}
+
+/* --- SMALL DESKTOPS / TABLETS (992px down) --- */
+@media (max-width: 992px) {
+    body {
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    /* Nav Links Wrap */
+    .nav-links {
+        gap: 20px;
+    }
+    
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .footer-contact {
+        grid-column: span 3;
+        margin-top: 10px;
+    }
+}
+
+/* --- MOBILE LANDSCAPE / LARGE PORTRAIT (768px down) --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.95rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+    
+    /* Navigation Menu Toggle Overlay */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 360px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 40px;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Hamburger animation states */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .btn-nav-cta {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    /* Footer Stack */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-brand {
+        grid-column: span 2;
+        margin-bottom: 20px;
+    }
+    
+    .footer-contact {
+        grid-column: span 2;
+    }
+    
+    /* General forms layouts */
+    .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+}
+
+/* --- SMALL MOBILE PORTRAITS (480px down) --- */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.88rem;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-brand, .footer-contact {
+        grid-column: span 1;
+    }
+    
+    .success-content {
+        padding: 30px 20px;
+    }
+}
