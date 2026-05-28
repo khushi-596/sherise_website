@@ -31,22 +31,17 @@
 }
 
 .loader-spinner {
-    width: 60px;
-    height: 60px;
-    border: 4px solid var(--border);
-    border-top: 4px solid var(--primary);
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--border);
+    border-top: 3px solid var(--primary);
     border-radius: 50%;
-    animation: spin 1s linear infinite, loader-glow 1.5s ease-in-out infinite alternate;
+    animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-@keyframes loader-glow {
-    0% { box-shadow: 0 0 10px rgba(124,58,237,0.1); }
-    100% { box-shadow: 0 0 25px rgba(124,58,237,0.3); }
 }
 
 /* --- FLOATING DECORATORS --- */
@@ -63,45 +58,45 @@
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(3deg); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
 }
 
 @keyframes float-rev {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(15px) rotate(-4deg); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
 }
 
 /* --- CUSTOM AOS (ANIMATE ON SCROLL) RUNNER --- */
 [data-aos] {
     opacity: 0;
     transition-property: opacity, transform;
-    transition-duration: 0.8s;
+    transition-duration: 0.7s;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 [data-aos="fade-up"] {
-    transform: translateY(30px);
+    transform: translateY(24px);
 }
 
 [data-aos="fade-down"] {
-    transform: translateY(-30px);
+    transform: translateY(-24px);
 }
 
 [data-aos="fade-left"] {
-    transform: translateX(40px);
+    transform: translateX(30px);
 }
 
 [data-aos="fade-right"] {
-    transform: translateX(-40px);
+    transform: translateX(-30px);
 }
 
 [data-aos="zoom-in"] {
-    transform: scale(0.9);
+    transform: scale(0.92);
 }
 
 [data-aos="zoom-out"] {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 /* Trigger states when .aos-animate is injected by Observer */
@@ -116,51 +111,7 @@
 [data-aos-delay="300"] { transition-delay: 300ms; }
 [data-aos-delay="400"] { transition-delay: 400ms; }
 [data-aos-delay="500"] { transition-delay: 500ms; }
-[data-aos-delay="600"] { transition-delay: 600ms; }
-[data-aos-delay="700"] { transition-delay: 700ms; }
-[data-aos-delay="800"] { transition-delay: 800ms; }
 
 /* Custom durations */
 [data-aos-duration="1000"] { transition-duration: 1000ms; }
 [data-aos-duration="1200"] { transition-duration: 1200ms; }
-[data-aos-duration="1500"] { transition-duration: 1500ms; }
-
-/* --- EXTRA KEYFRAME PRESETS --- */
-.pulse-glow {
-    animation: pulse-glow 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes pulse-glow {
-    0% {
-        box-shadow: 0 0 10px rgba(124,58,237,0.15);
-    }
-    100% {
-        box-shadow: 0 0 25px rgba(124,58,237,0.45);
-        border-color: rgba(124,58,237,0.4);
-    }
-}
-
-.pulse-glow-secondary {
-    animation: pulse-glow-sec 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes pulse-glow-sec {
-    0% {
-        box-shadow: 0 0 10px rgba(236,72,153,0.15);
-    }
-    100% {
-        box-shadow: 0 0 25px rgba(236,72,153,0.45);
-        border-color: rgba(236,72,153,0.4);
-    }
-}
-
-.shimmer-bg {
-    background: linear-gradient(90deg, var(--white) 25%, var(--primary-soft) 50%, var(--white) 75%);
-    background-size: 200% 100%;
-    animation: shimmer 2s infinite linear;
-}
-
-@keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
-}
